@@ -39,7 +39,7 @@ We came about with the concept of a one-stop payment portal after being inspired
 
 ## Design
 
-![demo](./demo.png)
+![demo](./public/demo.png)
 _wireframes by @fcyen_
 
 ## Tech Implementation

@@ -85,7 +85,15 @@ const CheckoutForm = () => {
 
   return (
     <> 
-    <h2>🇺🇦</h2>
+    <div
+      style={{display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <img
+        src="/ukraine.png"
+        alt="flag"
+        height="87"
+        width="100" 
+      />
+    </div>
     <p id='title'><b>Help Ukraine, </b>one coffee at a time.</p>
     <div className="tooltip">
       <h1>$ 5</h1>

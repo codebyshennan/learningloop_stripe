@@ -7,7 +7,7 @@ import "./App.css";
 // Make sure to call loadStripe outside of a component’s render to avoid
 // recreating the Stripe object on every render.
 // This is your test publishable API key.
-const promise = loadStripe(process.env.STRIPE_PUBLISHABLE_KEY);
+const promise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
 
 export default function App() {
   return (

@@ -13,7 +13,7 @@
     "stripe": "^8.202.0"
   },
   "devDependencies": {
-    "concurrently": "4.1.2"
+    "concurrently": "^4.1.2"
   },
   "homepage": "http://localhost:3000/checkout",
   "proxy": "http://localhost:4242",
@@ -23,7 +23,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start": "concurrently \"yarn start-client\" \"yarn start-server\""
+    "start": "npm run start-client & npm start-server"
   },
   "eslintConfig": {
     "extends": "react-app"

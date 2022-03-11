@@ -18,6 +18,7 @@ body {
 
 form {
   width: 30vw;
+  margin: auto;
   align-self: center;
   box-shadow: 0px 0px 0px 0.5px rgba(50, 50, 93, 0.1),
     0px 2px 5px 0px rgba(50, 50, 93, 0.1), 0px 1px 1.5px 0px rgba(0, 0, 0, 0.07);
@@ -150,6 +151,42 @@ button:disabled {
   transform-origin: 0px 10.2px;
   -webkit-animation: loading 2s infinite ease;
   animation: loading 2s infinite ease;
+}
+
+h2 {
+  font-size: 5em;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+p#title {
+  margin-top: 0;
+  font-size: 2em;
+  text-align: center;
+}
+
+.tooltip {
+  height: 70px;
+  margin: auto;
+  border-radius: 4px;
+  background-color: #0057b7;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.tooltip h1 {
+  color: white;
+  margin-block-end: 0;
+}
+
+.arrow-down {
+  margin: auto;
+  width: 0; 
+  height: 0; 
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #0057b7;
 }
 
 @keyframes loading {

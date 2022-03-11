@@ -84,7 +84,14 @@ const CheckoutForm = () => {
   };
 
   return (
-    <>
+    <> 
+    <h2>🇺🇦</h2>
+    <p id='title'><b>Help Ukraine, </b>one coffee at a time.</p>
+    <div className="tooltip">
+      <h1>$ 5</h1>
+      <div className="arrow-down"></div>
+    </div>
+
     <form id="payment-form" onSubmit={handleSubmit}>
 
       <CardElement 
@@ -113,7 +120,7 @@ const CheckoutForm = () => {
       {/* Show a success message upon completion */}
       <ToastContainer />
     </form>
-    </>
+  </>
   );
 }
 

@@ -75,6 +75,13 @@ export default function CheckoutForm() {
   };
 
   return (
+    <> 
+    <h2>🇺🇦</h2>
+    <p id='title'><b>Help Ukraine, </b>one coffee at a time.</p>
+    <div className="tooltip">
+      <h1>$ 5</h1>
+      <div className="arrow-down"></div>
+    </div>
     <form id="payment-form" onSubmit={handleSubmit}>
       <CardElement id="card-element" options={cardStyle} onChange={handleChange} />
       <button
@@ -106,5 +113,6 @@ export default function CheckoutForm() {
         </a> Refresh the page to pay again.
       </p>
     </form>
+  </>
   );
 }

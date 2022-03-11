@@ -10,7 +10,7 @@ app.use(express.json());
 app.post("/create-payment-intent", async (req, res) => {
   // Create a PaymentIntent with the order amount and currency
   const paymentIntent = await stripe.paymentIntents.create({
-    amount: 50,
+    amount: 500,
     currency: "sgd"
   });
 

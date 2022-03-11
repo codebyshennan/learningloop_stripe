@@ -23,8 +23,7 @@ npm install
 3. Run the application
 
 ```
-npm run start-server
-npm run start-client
+npm run build & npm run start
 ```
 
 4. Go to [http://localhost:3000/checkout](http://localhost:3000/checkout)

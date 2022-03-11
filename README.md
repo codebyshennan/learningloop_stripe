@@ -18,11 +18,31 @@ The best code is the simplest code optimized for minimal complexity for maintena
 npm install
 ```
 
-2. Run the application
+2. Get your publishable keys and API secrets from [Stripe]('https://dashboard.stripe.com/apikeys')
+
+3. Run the application
 
 ```
 npm run start-server
 npm run start-client
 ```
 
-3. Go to [http://localhost:3000/checkout](http://localhost:3000/checkout)
+4. Go to [http://localhost:3000/checkout](http://localhost:3000/checkout)
+
+## Ideation
+
+We came about with the concept of a one-stop payment portal after being inspired by the recent Russian-Ukraine conflict. People were looking to donate to a common cause (albeit anonymously) but often find it very cumbersome to write checks or clear very lengthy payment channels. Since Stripe is E2E-secured, we thought that:
+
+- Fixing the price of payment (at the cost of a typical cuppa, at $5)
+- Fixing the mode of payment (c'mon, everyone has a credit/debit card)
+  would help to reduce programmatic complexity
+
+## Design
+
+![demo](./demo.png)
+_wireframes by @fcyen_
+
+## Tech Implementation
+
+Front: React
+Back: Express, Stripe

@@ -4,8 +4,10 @@ import {
   useStripe,
   useElements
 } from "@stripe/react-stripe-js";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-export default function CheckoutForm() {
+const CheckoutForm = () => {
   const [succeeded, setSucceeded] = useState(false);
   const [error, setError] = useState(null);
   const [processing, setProcessing] = useState('');
@@ -14,8 +16,8 @@ export default function CheckoutForm() {
   const stripe = useStripe();
   const elements = useElements();
 
+  // Create PaymentIntent as soon as the page loads
   useEffect(() => {
-    // Create PaymentIntent as soon as the page loads
     window
       .fetch("/create-payment-intent", {
         method: "POST"
@@ -28,6 +30,13 @@ export default function CheckoutForm() {
       });
   }, []);
 
+  // Open up a toast to a successful payment
+  useEffect(()=> {
+    if (succeeded) {
+      toast.success('Payment succeeded!')
+    }
+  }, [succeeded])
+  
   const cardStyle = {
     style: {
       base: {
@@ -75,36 +84,37 @@ export default function CheckoutForm() {
   };
 
   return (
+    <>
     <form id="payment-form" onSubmit={handleSubmit}>
-      <CardElement id="card-element" options={cardStyle} onChange={handleChange} />
-      <button
-        disabled={processing || disabled || succeeded}
-        id="submit"
-      >
+
+      <CardElement 
+        id="card-element" 
+        options={cardStyle} 
+        onChange={handleChange} 
+      />
+
+      <button disabled={ processing || disabled || succeeded }>
         <span id="button-text">
-          {processing ? (
-            <div className="spinner" id="spinner"></div>
-          ) : (
-            "Pay now"
-          )}
+        { processing ? (
+          <div className="spinner" id="spinner"></div>
+        ) : (
+          "Pay now"
+        )}
         </span>
       </button>
+
       {/* Show any error that happens when processing the payment */}
       {error && (
         <div className="card-error" role="alert">
           {error}
         </div>
       )}
+
       {/* Show a success message upon completion */}
-      <p className={succeeded ? "result-message" : "result-message hidden"}>
-        Payment succeeded, see the result in your
-        <a
-          href={`https://dashboard.stripe.com/test/payments`}
-        >
-          {" "}
-          Stripe dashboard.
-        </a> Refresh the page to pay again.
-      </p>
+      <ToastContainer />
     </form>
+    </>
   );
 }
+
+export default CheckoutForm

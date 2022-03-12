@@ -46,3 +46,16 @@ _wireframes by @fcyen_
 
 Front: React
 Back: Express, Stripe
+
+## Reflections
+
+@fcyen: "In this challenge I've discovered Stripe’s API and the different ways it offers developers to implement a payment flow. It's also a chance to brush up on my CSS skills and learn how to deploy a heroku app with both client and server code.
+
+I also learned that the planning phase prior to coding is important. Firstly, asking clarifying questions helps you to better understand the problem statement and secondly, brainstorming with your partner generates interesting ideas and allows transfer of knowledge. With these, we were able to come up with a ‘game plan’ that we feel most satisfied with.
+
+It’s been an awesome experience participating in this week-long program and partnering up with @wongsn!"
+
+@wongsn: "I've come to appreciate how such a simple task can trip so many people up if the understanding of the technology is not sound. When we started, we erroneously called the clientsecret via the API routes in a NextJS app. We also tried and failed many ways to deploy a React app onto Heroku while serving the server in the same port.
+
+It's a great experience working with @fcyen as we have complementary skills to bring to the table, and she's really patient in debugging the problems with me!
+"

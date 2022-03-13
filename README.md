@@ -4,6 +4,10 @@ Sprint by @wongsn and @fcyen
 
 [Stripe Docs](https://stripe.com/docs/checkout/quickstart?client=next)
 
+Hosted on Heroku
+
+[Gimme Kopi!](gimme-kopi.herokuapp.com/)
+
 ### Challenge Prompt
 
 How would you build a Stripe checkout with as little code as possible?
@@ -12,22 +16,33 @@ The best code is the simplest code optimized for minimal complexity for maintena
 
 ## Running the sample
 
-1. Build the application
+1. Fork and clone the repo
+
+```
+mkdir stripe_practice & cd stripe_practice
+git clone https://github.com/wongsn/learningloop_stripe.git
+```
+
+2. Build the application
 
 ```
 npm install
 ```
 
-2. Get your publishable keys and API secrets from [Stripe]('https://dashboard.stripe.com/apikeys')
-
-3. Run the application
+3. Get your publishable keys and API secrets from [Stripe]('https://dashboard.stripe.com/apikeys') and put it into
 
 ```
-npm run start-server
+.env
+```
+
+4. Run the application on two separate terminal tabs (for server and client)
+
+```
+npm run start
 npm run start-client
 ```
 
-4. Go to [http://localhost:3000/checkout](http://localhost:3000/checkout)
+5. Go to [http://localhost:3000/checkout](http://localhost:3000/checkout)
 
 ## Ideation
 
@@ -40,11 +55,13 @@ We came about with the concept of a one-stop payment portal after being inspired
 ## Design
 
 ![demo](./public/demo.png)
+
 _wireframes by @fcyen_
 
 ## Tech Implementation
 
 Front: React
+
 Back: Express, Stripe
 
 ## Reflections
